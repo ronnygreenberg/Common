@@ -547,3 +547,6 @@ def are_dicts_different(dict1, dict2):
 
 def url_decode(thing):
     return unquote(thing)
+
+def get_week_day(date):
+    return date.weekday() + 2  # Weekday function starts with Monday as 0... so I added +2 to normalize
