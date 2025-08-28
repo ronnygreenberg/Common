@@ -550,3 +550,11 @@ def url_decode(thing):
 
 def get_week_day(date):
     return date.weekday() + 2  # Weekday function starts with Monday as 0... so I added +2 to normalize
+
+def append_with_lock(thingi, inserti, lock):
+    with lock:
+        thingi.append(inserti)
+
+def add_with_lock(thingi, inserti, lock):
+    with lock:
+        thingi.add(inserti)
